@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}KMZ问答 - 首页{% endblock %}
+
+{% block head %}
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .qa {
+            list-style-type: none;
+            padding: 0;
+        }
+        .qa li {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .qa li:hover {
+            background-color: #ddd;
+        }
+        li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        li a:hover {
+            color: #0077cc;
+        }
+        #content {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h1>欢迎来到KMZ问答</h1>
+    <p>这里是问题和答案的平台。</p>
+    <main>
+        <section>
+            <h2>最新问题</h2>
+            {% for question in questions %}
+                <ul class="qa">
+                    <li>
+                        <div style="float: left; width: 75px; height: 75px; background-image: url('static/profile_photo.png');
+                        background-size: contain; border-radius: 50%"></div>
+                        <a class="title" href="{{url_for('qa.question_detail', qa_id=question.id)}}">{{question.title}}</a>
+                        <p id="content">{{question.content}}</p>
+                        <p id="content">{{ question.author_username }}</p>
+                        <p id="content">{{ question.create_time }}</p>
+                    </li>
+                </ul>
+            {% endfor %}
+        </section>
+    </main>
+
+
+
+    </div>
+{% endblock %}
