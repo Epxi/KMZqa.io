@@ -1,0 +1,106 @@
+/* 全局样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 顶部导航栏样式 */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 内容区样式 */
+.content {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* 注册、登录、提问表单样式 */
+form input[type="text"],
+form input[type="password"],
+form textarea,
+button {
+  margin-bottom: 30px;
+  padding: 12px;
+  width: 60%;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.register {
+  margin-top: 20px;
+  padding: 8px;
+  width: 50%;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.register:hover {
+  background-color: #555;
+}
+
+/* 问题样式 */
+.question {
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.question h2 {
+  margin-bottom: 5px;
+}
+
+/* 回答样式 */
+.answers {
+  margin-bottom: 20px;
+}
+
+.answer {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
